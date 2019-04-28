@@ -19,6 +19,9 @@
     <string name="mobile">Mobile No</string>
     <string name="user_address">Address</string>
     <string name="find_near_hosp">Find nearest Hospitals</string>
+    <string name="bookAppt">Book Appointment</string>
+    <string name="aboutUs">About Us</string>
+    <string name="contactUs">Contact Us</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

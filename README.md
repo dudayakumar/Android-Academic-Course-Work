@@ -7,3 +7,9 @@ Android Applications Development
 ### BloodBank3 App v1.1 - 
 #### Created a password-based account
 #### Accomplished basic user sign up, and link to firebase  
+### BloodBank3 App v1.2 - 
+#### Navigation drawer structure added
+#### Navigation items included 
+### BloodBank3 App v1.3 - 
+#### Fragments added for Home and AboutUs menu items
+#### Fragment navigation implemented for Home and AboutUs 
