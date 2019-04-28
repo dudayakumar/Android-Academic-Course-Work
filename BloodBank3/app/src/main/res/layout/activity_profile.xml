@@ -6,7 +6,6 @@
     android:orientation="vertical">
 
     <EditText
-        android:textColor="@android:color/white"
         android:id="@+id/input_userName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -14,7 +13,6 @@
         android:hint="@string/displayName" />
 
     <EditText
-        android:textColor="@android:color/white"
         android:id="@+id/input_userEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -26,16 +24,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/prompt_password"
-        android:inputType="textPassword"
-        android:textColor="@android:color/white" />
+        android:inputType="textPassword"/>
 
     <EditText
         android:id="@+id/input_password_confirm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/prompt_confirm_password"
-        android:inputType="textPassword"
-        android:textColor="@android:color/white" />
+        android:inputType="textPassword"/>
 
     <Button
         android:layout_gravity="center_horizontal"

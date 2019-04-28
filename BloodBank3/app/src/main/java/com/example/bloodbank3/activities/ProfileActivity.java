@@ -1,5 +1,6 @@
 package com.example.bloodbank3.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -61,6 +62,9 @@ public class ProfileActivity extends AppCompatActivity {
                                     String id = mAuth.getCurrentUser().getUid();
                                     db_ref.child(id).child("Name").setValue(Name);
                                     Log.d("ProfileActivity", "*****createUserWithEmail:success");
+                                    Intent intent = new Intent(getApplicationContext(), DashboardActivity.class);
+                                    startActivity(intent);
+                                    Log.d("ProfileActivity","*****Navigating to DashboardActivity");
                                 }
                             }
                         });
