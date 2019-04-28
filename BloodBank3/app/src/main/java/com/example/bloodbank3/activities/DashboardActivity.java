@@ -62,6 +62,7 @@ public class DashboardActivity extends AppCompatActivity {
                         break;
                     case R.id.bookAppt:
                         Log.d("DashBoardActivity","*****Navigating to book an appointment");
+                        startActivity(new Intent(getApplicationContext(), BookAppointmentActivity.class));
                         break;
                     case R.id.nearby_hospital:
                         Log.d("DashBoardActivity","*****Navigating to nearby hospital");

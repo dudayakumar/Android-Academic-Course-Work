@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BB3</string>
+    <string name="app_name">Blood Bucket</string>
     <string name="home">Home</string>
     <string name="profile">Profile</string>
     <string name="logout">Log out</string>
@@ -25,6 +25,9 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="appointment_date">Appointment Date</string>
+    <string name="appointment_time">Appointment Time</string>
 
     <array name="gender">
         <item>Male</item>
