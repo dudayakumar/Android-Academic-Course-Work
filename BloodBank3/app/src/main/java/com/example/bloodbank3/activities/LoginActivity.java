@@ -8,10 +8,13 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.bloodbank3.R;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
 
     private Button signin, signup, resetpass;
+
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +24,8 @@ public class LoginActivity extends AppCompatActivity {
         signin = findViewById(R.id.button_login);
         signup = findViewById(R.id.button_register);
         resetpass = findViewById(R.id.button_forgot_password);
+
+        mAuth = FirebaseAuth.getInstance();
 
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
