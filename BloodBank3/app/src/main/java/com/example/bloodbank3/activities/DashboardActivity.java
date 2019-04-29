@@ -49,6 +49,19 @@ public class DashboardActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         nv = (NavigationView)findViewById(R.id.nav_view);
+
+        //Conditionally rendering navigation menu items
+        //If logged-in user is an admin
+        if(cur_user.getEmail().equalsIgnoreCase("admin@gmail.com")) {
+            nv.getMenu().findItem(R.id.userprofile).setVisible(false);
+            nv.getMenu().findItem(R.id.bookAppt).setVisible(false);
+            nv.getMenu().findItem(R.id.aboutUs).setVisible(false);
+            nv.getMenu().findItem(R.id.contactUs).setVisible(false);
+        }
+
+        //If logged-in user is a donor
+
+
         nv.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
@@ -68,7 +81,7 @@ public class DashboardActivity extends AppCompatActivity {
                         getSupportFragmentManager().beginTransaction().replace(R.id.flContent, new Home()).commit();
                         break;
                     case R.id.userprofile:
-                        Log.d("DashBoardActivity","*****Navigating to user profile");                        getSupportFragmentManager().beginTransaction().replace(R.id.flContent, new AboutUs()).commit();
+                        Log.d("DashBoardActivity","*****Navigating to user profile");
                         startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
                         break;
                     case R.id.bookAppt:

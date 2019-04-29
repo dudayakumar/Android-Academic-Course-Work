@@ -56,4 +56,6 @@
         <item>Wisconsin</item>
     </string-array>
 
+    <string name="admin_email">admin@gmail.com</string>
+
 </resources>

@@ -18,6 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
+            android:text="laila@gmail.com"
             android:hint="@string/prompt_email" />
 
         <EditText
@@ -25,6 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/prompt_password"
+            android:text="qwerty"
             android:inputType="textPassword" />
 
         <Button
