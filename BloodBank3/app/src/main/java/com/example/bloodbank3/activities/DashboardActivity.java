@@ -17,8 +17,15 @@ import android.view.MenuItem;
 import com.example.bloodbank3.R;
 import com.example.bloodbank3.fragments.AboutUs;
 import com.example.bloodbank3.fragments.Home;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class DashboardActivity extends AppCompatActivity {
+
+    private FirebaseAuth mAuth;
+    private FirebaseDatabase user_db;
+    private FirebaseUser cur_user;
 
     private DrawerLayout dl;
     private ActionBarDrawerToggle t;
@@ -28,6 +35,10 @@ public class DashboardActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
+
+        mAuth = FirebaseAuth.getInstance();
+        user_db = FirebaseDatabase.getInstance();
+        cur_user = mAuth.getCurrentUser();
 
         dl = (DrawerLayout)findViewById(R.id.activity_dashboard);
         t = new ActionBarDrawerToggle(this, dl, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -75,6 +86,9 @@ public class DashboardActivity extends AppCompatActivity {
                         Log.d("DashBoardActivity","*****Navigating to contact us");
                         break;
                     case R.id.logout:
+                        mAuth.signOut();
+                        Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                        startActivity(intent);
                         Log.d("DashBoardActivity","*****Navigating to logout");
                         break;
                     default:
