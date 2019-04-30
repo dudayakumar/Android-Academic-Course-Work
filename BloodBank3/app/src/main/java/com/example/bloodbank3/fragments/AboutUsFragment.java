@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import com.example.bloodbank3.R;
 
-public class AboutUs extends Fragment {
+public class AboutUsFragment extends Fragment {
 
     private TextView textView;
 

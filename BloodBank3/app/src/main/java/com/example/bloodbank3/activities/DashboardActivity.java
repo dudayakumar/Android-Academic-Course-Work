@@ -4,19 +4,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 
 import com.example.bloodbank3.R;
-import com.example.bloodbank3.fragments.AboutUs;
-import com.example.bloodbank3.fragments.Home;
+import com.example.bloodbank3.fragments.AboutUsFragment;
+import com.example.bloodbank3.fragments.HomeFragment;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
@@ -78,7 +74,7 @@ public class DashboardActivity extends AppCompatActivity {
                 {
                     case R.id.home:
                         Log.d("DashBoardActivity","*****Navigating to home page");
-                        getSupportFragmentManager().beginTransaction().replace(R.id.flContent, new Home()).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.flContent, new HomeFragment()).commit();
                         break;
                     case R.id.userprofile:
                         Log.d("DashBoardActivity","*****Navigating to user profile");
@@ -93,7 +89,7 @@ public class DashboardActivity extends AppCompatActivity {
                         break;
                     case R.id.aboutUs:
                         Log.d("DashBoardActivity","*****Navigating to about us");
-                        getSupportFragmentManager().beginTransaction().replace(R.id.flContent, new AboutUs()).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.flContent, new AboutUsFragment()).commit();
                         break;
                     case R.id.contactUs:
                         Log.d("DashBoardActivity","*****Navigating to contact us");
@@ -114,8 +110,8 @@ public class DashboardActivity extends AppCompatActivity {
         });
 
         if(savedInstanceState == null){
-            //Initially loading fragment with Home page content
-            getSupportFragmentManager().beginTransaction().replace(R.id.flContent, new Home()).commit();
+            //Initially loading fragment with HomeFragment page content
+            getSupportFragmentManager().beginTransaction().replace(R.id.flContent, new HomeFragment()).commit();
             nv.getMenu().getItem(0).setChecked(true);
         }
     }
